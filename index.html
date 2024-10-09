@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="/css/home.css"><!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="css/scss.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <title>TP1</title>
 </head>
 <body>
-    <header>
+    <header class="mt-6 mx-2">
         <nav class="NavbarItems">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -18,10 +23,12 @@
             </ul>
         </nav>
     </header>
+    
     <div class="caroussel">
         <img src="./img/bg2.jpg" alt="Image de votre carrousel" class="bg"> <!-- Ajoutez votre image ici -->
         <h1>Bienvenue sur notre site !</h1> <!-- Titre superposé à l'image -->
     </div>
+    
     <section class="destinations">
         <h2>Nos Destinations</h2>
         <div class="destination-grid">
@@ -48,5 +55,130 @@
             </div>
         </div>
     </section>
+
+    <main class="trip">
+        <div class="voyage">
+            <h1>Voyagez vers l'Inconnu</h1>
+            <p class="sous-titre">Laissez-vous emporter par la beauté de destinations uniques entre nature exotique et métropoles fascinantes</p>
+
+            <div class="first-des">
+                <div class="des-text">
+                    <h2>Phuket : L'île aux mille merveilles</h2>
+                    <p>
+                        Phuket, la plus grande île de Thaïlande, offre un mélange unique de plages immaculées, de nature luxuriante et de traditions culturelles riches.
+                        Entre les eaux turquoise de Patong, les temples majestueux comme le Wat Chalong, et les marchés animés de la vieille ville, 
+                        chaque recoin de Phuket vous promet un dépaysement total et des souvenirs inoubliables.
+                    </p>
+                </div>
+                <div class="image">
+                    <img alt="img" src="./img/phuket.jpg"/>
+                    <img alt="img" src="./img/phuket2.jpg"/>
+                </div>
+            </div>
+
+            <div class="first-des-reverse">
+                <div class="des-text">
+                    <h2>Séoul : Fusion de tradition et modernité</h2>
+                    <p>
+                        Séoul est une métropole fascinante où l'ancien et le moderne se rencontrent à chaque coin de rue. 
+                        De la majesté du palais Gyeongbokgung aux quartiers high-tech de Gangnam, la ville vous plonge dans un 
+                        voyage où la tradition coréenne s'entremêle harmonieusement avec les innovations du futur.
+                        Explorez une culture riche et dynamique, le tout dans une ville en perpétuel mouvement.
+                    </p>
+                </div>
+                <div class="image">
+                    <img alt="img" src="./img/seoul2.jpg"/>
+                    <img alt="img" src="./img/seoul.jpg"/>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="articles">
+        <h2>Nos articles par catégories</h2>
+        <div class="article-grid">
+            <div class="article-card">
+                <div class="article-icon" style="background-image: url('../img/globe.jpg');">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Tous nos articles</h3>
+                <p>448 articles</p>
+            </div>
+            <div class="article-card">
+                <div class="article-icon" style="background-image: url('./img/fly.jpg');">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Voyage</h3>
+                <p>330 articles</p>
+            </div>
+            <div class="article-card">
+                <div class="article-icon" style="background-image: url('./img/pieces.jpg');">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3>Budget</h3>
+                <p>34 articles</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative bg-black text-black">
+        <div class="absolute top-0 left-0 w-full overflow-hidden">
+
+            <div class="grid lg:grid-cols-4 gap-20 sm:grid-cols-1 p-20">
+                <div class="flex flex-col gap-5">
+                    <h2 class="text-3xl text-blue-500">Footer</h2>
+                    <p class="text-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, deleniti dolores
+                        vel ipsa reiciendis corporis similique dolor earum aut itaque.
+                    </p>
+                </div>
+    
+                <div>
+                    <h3 class="text-[22px] list-none font-semibold text-blue-500 py-2 uppercase">Creativity</h3>
+                    <ul class="text-black">
+                        <li class="my-4 list-none">Website Guidelines & Ideas</li>
+                        <li class="my-4 list-none">Tips & Tricks</li>
+                        <li class="my-4 list-none">Photography</li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h3 class="text-[22px] list-none font-semibold text-blue-500 py-2 uppercase">Creativity</h3>
+                    <ul class="text-black">
+                        <li class="my-4 list-none">Guidelines & Ideas</li>
+                        <li class="my-4 list-none">Tips & Tricks</li>
+                        <li class="my-4 list-none">Photography</li>
+                    </ul>
+                </div>
+    
+                <div class="mb-4 md:mb-0 text-black">
+                    <h2 class="text-[22px] font-semibold text-blue-500 py-2 uppercase">Contact</h2>
+                    <p class="text-[16px] my-4">Email: youremail@gmail.com</p>
+                    <p class="text-[16px] my-4">Phone: +1 113-456-7890</p>
+                    <div class="flex space-x-4">
+                        <a class="text-black hover:text-blue-500 transform hover:scale-150 
+                        transition-all duration-150 ease-in-out" href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="text-black hover:text-blue-500 transform hover:scale-150
+                         transition-all duration-150 ease-in-out" href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-black hover:text-blue-500 transform hover:scale-150
+                         transition-all duration-150 ease-in-out" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-black hover:text-blue-500 transform hover:scale-150
+                         transition-all duration-150 ease-in-out" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+
+        </div>
+    </footer>
+    
+    
 </body>
 </html>

@@ -1,8 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+   /* background-color: #fba49a86; */
+}
+
 /* Style du header et de la navigation */
 header {
     background-color: #1d2731; /* Couleur de fond de la navigation */
     padding: 15px 20px;
-    border-radius: 0; /* Pas de coins arrondis */
+    border-radius: 13px; /* Pas de coins arrondis */
     position: relative; /* Conserve le contexte de position */
     z-index: 3; /* Assurez-vous que le z-index est supérieur */
     margin: 0; /* Supprimez toute marge pour qu'il touche le haut */
@@ -72,14 +80,14 @@ header {
 .destinations {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
     margin-top: 70vh; /* Assurez-vous que la section commence sous la bannière */
+    background-color: #f4f4f4;
 }
 
 .destinations h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #333;
+
 }
 
 .destination-grid {
@@ -97,7 +105,6 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    cursor: pointer;
 }
 
 .destination-card:hover {
@@ -143,3 +150,66 @@ header {
 .cta-button:hover {
     background-color: #e64a19;
 }
+
+
+.voyage{
+    margin: 4rem 6rem;
+    
+}
+.voyage h1{
+    font-size: 3rem;
+}
+
+.sous-titre{
+    font-size: 1.25rem;
+}
+
+.first-des {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.first-des-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.des-text{
+    width: 45%;
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.des-text h2{
+    padding-bottom: 1rem;
+}
+
+.image{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -99;
+}
+
+.image img{
+    width: 49%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow:  -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
+}
+
+.image img:nth-child(2) {
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+
+

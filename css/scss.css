@@ -1,0 +1,54 @@
+.articles {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.articles h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.article-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.article-card {
+  text-align: center;
+  width: 150px;
+  position: relative;
+  transform: scale(1.05);
+}
+
+.article-icon {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-icon i {
+  font-size: 40px;
+  color: white;
+}
+
+.article-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/*# sourceMappingURL=scss.css.map */
