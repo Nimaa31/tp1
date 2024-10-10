@@ -1,52 +1,76 @@
 .articles {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+    text-align: center; /* Centre le texte dans la section */
+    padding: 50px 20px; /* Espacement autour de la section */
+    background-color: #f4f4f4; /* Couleur de fond de la section */
 }
 
 .articles h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
+    font-size: 2rem; /* Taille de la police pour le titre */
+    margin-bottom: 30px; /* Marge inférieure */
+    color: #333; /* Couleur du texte */
 }
 
 .article-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex; /* Utilise flexbox pour la disposition des cartes */
+    justify-content: space-around; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
 }
 
+/* Styles pour les cartes d'articles */
 .article-card {
-    text-align: center;
-    width: 150px;
-    position: relative;
-    transform: scale(1.05);
+    text-align: center; /* Centre le texte à l'intérieur de la carte */
+    width: 150px; /* Largeur de la carte */
+    margin: 15px; /* Marge autour de chaque carte */
+    transition: transform 0.3s; /* Transition pour l'effet de survol */
 }
 
+/* Styles pour l'icône de l'article */
 .article-icon {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 180px; /* Largeur de l'icône */
+    height: 180px; /* Hauteur de l'icône */
+    border-radius: 50%; /* Forme ronde pour l'icône */
+    background-size: cover; /* Couvre le conteneur */
+    background-position: center; /* Centre l'image de fond */
+    margin-bottom: 15px; /* Marge inférieure */
+    display: flex; /* Utilise flex pour centrer l'icône */
+    align-items: center; /* Centre verticalement l'icône */
+    justify-content: center; /* Centre horizontalement l'icône */
 }
 
+/* Style de l'icône */
 .article-icon i {
-    font-size: 40px;
-    color: white;
+    font-size: 40px; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
 }
 
+/* Style pour le titre de l'article */
 .article-card h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #333;
+    font-size: 1.2rem; /* Taille de la police pour le titre */
+    margin: 10px 0; /* Marge verticale */
+    color: #333; /* Couleur du texte */
 }
 
+/* Style pour le texte de l'article */
 .article-card p {
-    font-size: 1rem;
-    color: #777;
+    font-size: 1rem; /* Taille de la police pour le texte */
+    color: #777; /* Couleur du texte */
+}
+
+/* Responsive : À partir de 900px */
+@media (max-width: 900px) {
+    .article-card {
+        width: 200px; /* Augmente la largeur des cartes */
+    }
+}
+
+/* Responsive : À partir de 600px */
+@media (max-width: 600px) {
+    .article-grid {
+        justify-content: center; /* Centre les cartes dans la grille */
+    }
+
+    .article-card {
+        width: 45%; /* Réduit la largeur des cartes pour 2 par ligne */
+        margin: 10px; /* Ajuste la marge pour un espacement uniforme */
+    }
 }

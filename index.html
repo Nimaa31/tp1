@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home.css"><!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="css/scss.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Lien vers les fichiers CSS -->
+    <link rel="stylesheet" href="/css/home.css"> <!-- Styles principaux -->
+    <link rel="stylesheet" href="css/scss.css"> <!-- Styles SCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Icônes Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Styles Tailwind -->
 
     <title>TP1</title>
 </head>
+
 <body>
-    <header class="mt-6 mx-2">
-        <nav class="NavbarItems">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="about.html">Pays</a></li>
-                <li><a href="about.html">En Image</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+    <!-- SECTION: Header avec menu de navigation -->
+    <header class="bg-gray-800 p-4 rounded-lg relative z-30 mt-6 mx-2">
+        <nav class="flex items-center justify-between">
+            <!-- Bouton burger pour les petits écrans -->
+            <div id="menu-icon" class="block md:hidden text-white text-2xl cursor-pointer">
+                <i class="fas fa-bars"></i> <!-- Icône burger -->
+            </div>
+
+            <!-- Menu desktop centré -->
+            <ul class="hidden md:flex list-none m-0 p-0 flex-grow justify-center">
+                <li class="mx-4"><a href="index.html" class="text-white no-underline py-2 px-4 transition-colors duration-300 hover:bg-black rounded-md">Accueil</a></li>
+                <li class="mx-4"><a href="about.html" class="text-white no-underline py-2 px-4 transition-colors duration-300 hover:bg-black rounded-md">À propos</a></li>
+                <li class="mx-4"><a href="countries.html" class="text-white no-underline py-2 px-4 transition-colors duration-300 hover:bg-black rounded-md">Pays</a></li>
+                <li class="mx-4"><a href="gallery.html" class="text-white no-underline py-2 px-4 transition-colors duration-300 hover:bg-black rounded-md">En Image</a></li>
+                <li class="mx-4"><a href="contact.html" class="text-white no-underline py-2 px-4 transition-colors duration-300 hover:bg-black rounded-md">Contact</a></li>
+            </ul>
+
+            <!-- Menu mobile -->
+            <ul id="mobile-menu" class="absolute left-0 right-0 bg-gray-800 text-center hidden md:hidden top-16 p-4">
+                <li class="flex justify-between items-center mb-2">
+                    <span class="text-white text-xl">Menu</span>
+                    <div id="close-menu-icon" class="text-white text-2xl cursor-pointer">
+                        <i class="fas fa-times"></i> <!-- Icône de croix -->
+                    </div>
+                </li>
+                <li><a href="index.html" class="block py-2 px-4 text-white hover:bg-black">Accueil</a></li>
+                <li><a href="about.html" class="block py-2 px-4 text-white hover:bg-black">À propos</a></li>
+                <li><a href="countries.html" class="block py-2 px-4 text-white hover:bg-black">Pays</a></li>
+                <li><a href="gallery.html" class="block py-2 px-4 text-white hover:bg-black">En Image</a></li>
+                <li><a href="contact.html" class="block py-2 px-4 text-white hover:bg-black">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!-- SECTION: Carrousel -->
     <div class="caroussel">
         <img src="./img/bg2.jpg" alt="Image de votre carrousel" class="bg"> <!-- Ajoutez votre image ici -->
         <h1>Bienvenue sur notre site !</h1> <!-- Titre superposé à l'image -->
     </div>
-    
+
+    <!-- SECTION: Destinations -->
     <section class="destinations">
         <h2>Nos Destinations</h2>
         <div class="destination-grid">
-            <div class="destination-card" style="background-image: url('./img/paris.jpg');">
+            <!-- Carte de la destination Paris -->
+            <div class="destination-card" style="background-image: url('./img/paris.jpg');" id="paris-card">
                 <div class="overlay">
                     <h3>Paris</h3>
+                    <p class="weather-info">Météo en direct: En attente...</p>
                     <p>Découvrez la ville de l'amour et ses monuments emblématiques.</p>
                     <a href="#" class="cta-button">En savoir plus</a>
                 </div>
             </div>
-            <div class="destination-card" style="background-image: url('./img/newy.jpg');">
+
+            <!-- Carte de la destination New York -->
+            <div class="destination-card" style="background-image: url('./img/newy.jpg');" id="newyork-card">
                 <div class="overlay">
                     <h3>New York</h3>
+                    <p class="weather-info">Météo en direct: En attente...</p>
                     <p>La ville qui ne dort jamais avec ses gratte-ciels imposants.</p>
                     <a href="#" class="cta-button">En savoir plus</a>
                 </div>
             </div>
-            <div class="destination-card" style="background-image: url('./img/tokyo.jpg');">
+
+            <!-- Carte de la destination Tokyo -->
+            <div class="destination-card" style="background-image: url('./img/tokyo.jpg');" id="tokyo-card">
                 <div class="overlay">
                     <h3>Tokyo</h3>
+                    <p class="weather-info">Météo en direct: En attente...</p>
                     <p>Explorez la fusion de tradition et modernité dans la capitale japonaise.</p>
                     <a href="#" class="cta-button">En savoir plus</a>
                 </div>
@@ -56,11 +92,13 @@
         </div>
     </section>
 
+    <!-- SECTION: Voyage -->
     <main class="trip">
         <div class="voyage">
             <h1>Voyagez vers l'Inconnu</h1>
             <p class="sous-titre">Laissez-vous emporter par la beauté de destinations uniques entre nature exotique et métropoles fascinantes</p>
 
+            <!-- Première description de voyage -->
             <div class="first-des">
                 <div class="des-text">
                     <h2>Phuket : L'île aux mille merveilles</h2>
@@ -76,6 +114,7 @@
                 </div>
             </div>
 
+            <!-- Deuxième description de voyage -->
             <div class="first-des-reverse">
                 <div class="des-text">
                     <h2>Séoul : Fusion de tradition et modernité</h2>
@@ -93,9 +132,12 @@
             </div>
         </div>
     </main>
+
+    <!-- SECTION: Articles -->
     <section class="articles">
         <h2>Nos articles par catégories</h2>
         <div class="article-grid">
+            <!-- Article: Tous nos articles -->
             <div class="article-card">
                 <div class="article-icon" style="background-image: url('../img/globe.jpg');">
                     <i class="fas fa-map-marker-alt"></i>
@@ -103,6 +145,8 @@
                 <h3>Tous nos articles</h3>
                 <p>448 articles</p>
             </div>
+
+            <!-- Article: Voyage -->
             <div class="article-card">
                 <div class="article-icon" style="background-image: url('./img/fly.jpg');">
                     <i class="fas fa-plane"></i>
@@ -110,16 +154,28 @@
                 <h3>Voyage</h3>
                 <p>330 articles</p>
             </div>
+
+            <!-- Article: Budget -->
             <div class="article-card">
                 <div class="article-icon" style="background-image: url('./img/pieces.jpg');">
                     <i class="fas fa-coins"></i>
                 </div>
                 <h3>Budget</h3>
-                <p>34 articles</p>
+                <p>60 articles</p>
+            </div>
+
+            <!-- Article: Conseils -->
+            <div class="article-card">
+                <div class="article-icon" style="background-image: url('./img/conseil.jpg');">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Conseils</h3>
+                <p>30 articles</p>
             </div>
         </div>
     </section>
 
+    <!-- SECTION: Footer -->
     <footer class="relative bg-black text-black">
         <div class="absolute top-0 left-0 w-full overflow-hidden">
 
@@ -178,7 +234,46 @@
 
         </div>
     </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuIcon = document.getElementById('close-menu-icon');
     
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Affiche ou cache le menu
+        });
+    
+        closeMenuIcon.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden'); // Cache le menu
+        });
+
+
+        const apiKey = '41aa807656a24909a10134719241010'; // Remplacez par votre clé API
+
+            // Fonction pour récupérer la météo
+            async function fetchWeather(city, cardId) {
+                const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
+                const data = await response.json();
+
+                // Vérifiez si la réponse contient des données météorologiques
+                if (data.current) {
+                    const temperature = data.current.temp_c; // Température en Celsius
+                    const condition = data.current.condition.text; // Condition météorologique
+                    const weatherInfo = document.querySelector(`#${cardId} .weather-info`);
+                    weatherInfo.textContent = `Météo: ${temperature}°C, ${condition}`; // Mettez à jour le texte
+                } else {
+                    console.error('Erreur lors de la récupération des données météo:', data);
+                }
+}
+
+                // Récupérer la météo pour chaque ville
+                fetchWeather('Paris', 'paris-card');
+                fetchWeather('New York', 'newyork-card');
+                fetchWeather('Tokyo', 'tokyo-card');
+
+    </script>
     
 </body>
+
 </html>

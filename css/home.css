@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
    /* background-color: #fba49a86; */
 }
 
@@ -10,7 +10,7 @@ body{
 header {
     background-color: #1d2731; /* Couleur de fond de la navigation */
     padding: 15px 20px;
-    border-radius: 13px; /* Pas de coins arrondis */
+    border-radius: 13px;
     position: relative; /* Conserve le contexte de position */
     z-index: 3; /* Assurez-vous que le z-index est supérieur */
     margin: 0; /* Supprimez toute marge pour qu'il touche le haut */
@@ -27,7 +27,7 @@ header {
     list-style-type: none; /* Supprime les puces */
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Affiché en ligne sur les grands écrans */
 }
 
 .NavbarItems li {
@@ -45,6 +45,27 @@ header {
 .NavbarItems a:hover {
     background-color: #000000;
     border-radius: 5px;
+}
+
+/* Style par défaut du menu */
+.nav-menu {
+    display: flex; /* Flex sur grand écran */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu mobile */
+.menu-icon {
+    display: none; /* Affiché seulement sur mobile */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Icône de croix quand le menu est ouvert */
+.menu-icon.open i {
+    content: "\f00d"; /* Remplacer avec l'icône fa-times (croix) */
 }
 
 /* Style pour le carrousel */
@@ -87,7 +108,6 @@ header {
 .destinations h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-
 }
 
 .destination-grid {
@@ -151,16 +171,16 @@ header {
     background-color: #e64a19;
 }
 
-
-.voyage{
+/* Style pour la section voyage */
+.voyage {
     margin: 4rem 6rem;
-    
 }
-.voyage h1{
+
+.voyage h1 {
     font-size: 3rem;
 }
 
-.sous-titre{
+.sous-titre {
     font-size: 1.25rem;
 }
 
@@ -179,17 +199,17 @@ header {
     margin-top: 4.5rem;
 }
 
-.des-text{
+.des-text {
     width: 45%;
     text-align: start;
     font-size: 1.1rem;
 }
 
-.des-text h2{
+.des-text h2 {
     padding-bottom: 1rem;
 }
 
-.image{
+.image {
     position: relative;
     width: 50%;
     display: flex;
@@ -197,12 +217,12 @@ header {
     z-index: -99;
 }
 
-.image img{
+.image img {
     width: 49%;
     height: 350px;
     object-fit: cover;
     border-radius: 6px;
-    box-shadow:  -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
+    box-shadow: -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
 }
 
 .image img:nth-child(2) {
@@ -210,6 +230,30 @@ header {
     top: -10%;
     right: 0;
 }
+.weather-info {
+    border: 2px solid red; /* Bordure rouge */
+    background-color: rgba(255, 0, 0, 0.1); /* Fond légèrement rouge */
+    color: yellow; /* Couleur du texte en jaune */
+    padding: 5px; /* Ajoute de l'espace à l'intérieur de l'encadré */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 10px; /* Marge au-dessus pour l'espacement */
+}
 
+
+@media screen and (max-width: 600px) {
+    .des-text p {
+        display: none; /* Cache le texte à l'intérieur de .des-text */
+    }
+
+    .des-text h2 {
+        display: block; /* Assurez-vous que le titre est affiché */
+    }
+
+    .image img {
+        height: 350px; /* Augmentez la hauteur des images */
+        width: auto; /* Gardez la largeur automatique pour conserver les proportions */
+        object-fit: cover; /* Assurez-vous que l'image couvre le conteneur */
+    }
+}
 
 
