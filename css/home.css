@@ -230,6 +230,7 @@ header {
     top: -10%;
     right: 0;
 }
+
 .weather-info {
     border: 2px solid red; /* Bordure rouge */
     background-color: rgba(255, 0, 0, 0.1); /* Fond légèrement rouge */
@@ -238,8 +239,6 @@ header {
     border-radius: 5px; /* Coins arrondis */
     margin-top: 10px; /* Marge au-dessus pour l'espacement */
 }
-
-
 @media screen and (max-width: 600px) {
     .des-text p {
         display: none; /* Cache le texte à l'intérieur de .des-text */
